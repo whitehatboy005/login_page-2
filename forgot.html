@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forgot Password</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+    }
+    
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    @keyframes animateBackground {
+        0% { background-position: 0 0; }
+        100% { background-position: 100% 0; }
+    }
+
+    .animated-background {
+        animation: animateBackground 20s linear infinite;
+        background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff0000);
+        background-size: 400% 400%;
+    }
+
+    .forgot-password-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 255, 255, 0.7);
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .forgot-password-container h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+    }
+
+    .forgot-password-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .forgot-password-form input {
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        transition: border-color 0.3s;
+    }
+
+    .forgot-password-form input:focus {
+        outline: none;
+        border-color: #007bff;
+    }
+
+    .forgot-password-form input[type="email"] {
+        width: 100%;
+    }
+
+    .forgot-password-form input[type="submit"] {
+        background: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    .forgot-password-form input[type="submit"]:hover {
+        background: #0056b3;
+    }
+
+    .form-footer {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .form-footer a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .form-footer a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+    <div class="background animated-background"></div>
+    <div class="forgot-password-container">
+        <h2>Forgot Password</h2>
+        <form class="forgot-password-form" action="#" method="post">
+            <input type="email" name="email" placeholder="Enter your email address" required>
+            <input type="submit" value="Reset Password">
+            <div class="form-footer">
+                <a href="login.html">Back to Login</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
